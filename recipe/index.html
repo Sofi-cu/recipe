@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookolo</title>
+  <link rel="stylesheet" href="style.css"> <!-- Correct the rel attribute to "stylesheet" -->
+  <style>
+      *{
+    text-decoration: none;
+}
+    body {
+      margin: 0; /* Remove default margin */
+      padding: 0; /* Remove default padding */
+      box-shadow: 10px;
+      
+    }
+    
+    
+    li{
+        list-style: none;
+        display: inline-block;
+        
+
+    }
+    li a{
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        margin-right:25px;
+    }
+    li a:hover {
+      color: #fff;
+      
+
+    }
+    
+
+   
+    .paragraph {
+      text-align: center;
+      font-family: math;
+     
+    }
+
+    /* Add styles for the background image */
+    
+
+    .recipe-image {
+      max-width: 60%;
+      height: 240px;
+    }
+    .recipe-title {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    .recipe-description {
+      font-size: 16px;
+      margin: 18px 0;
+    }
+
+
+.Container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      
+          }
+
+          .form{
+            background-color: #aeb7b7;
+            border-radius: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 55px auto;
+            max-width: 332px;
+            padding: 30px;
+            text-align: center;
+          }
+
+
+    .cook-now-button {
+      background-color: gray;
+    color:black;
+    padding: 8px 7px;
+    border: none;
+    border-radius: 4px;
+    font-size: 17px;
+    cursor: pointer;
+    text-decoration: none;
+      
+    }
+
+    .cook-now-button:hover {
+      background-color: white;
+    }
+
+    .navbar{
+        background: rgb(62, 60, 58);
+        font-family:calibri;
+       padding: 18px;
+       text-align: center;
+        }
+
+
+  </style>
+</head>
+
+
+
+<body>
+ <div class="navbar">
+   
+    
+    <ul>
+      <li><a href="practise.html">Recipe List</a></li>
+      <li><a href="practise.html">Recipe Detail</a></li>
+      <li><a href="addrecipe.html">Add Recipe</a></li>
+  </ul>
+ </div>
+  
+
+  <div class="paragraph">
+    <h1>Flavors Unleashed: Your Culinary Adventure Awaits!</h1>
+  </div>
+  
+  
+
+  <div class="container"> 
+    
+    
+    <div class="form">
+    <h1>Recipe of the Day</h1>
+    <img class="recipe-image" src="sapageti.jpg" alt="Recipe of the Day">
+    <h3 class="recipe-title">Delicious Spaghetti Carbonara</h3>
+    <p class="recipe-description">Indulge in the creamy goodness of classic spaghetti carbonara with crispy bacon and Parmesan cheese.</p>
+    <a href="spaghetti.html" class="cook-now-button">Cook Now</a>
+  </div>
+  </div>
+
+  
+</body>
+</html>

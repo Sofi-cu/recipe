@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Detail Page</title>
+    
+    
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            box-shadow: 10px;
+           
+        }
+        
+
+        .recipe-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 306px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .List {
+            flex-wrap: wrap;
+            display: flex; /* Use flexbox to arrange divs horizontally */
+            justify-content: space-between; /* Add space between the divs */
+            margin: 58px auto;
+            max-width: 869px; /* Set a maximum width for the container */
+            align-items: stretch;
+           
+        
+        }
+
+        .recipe-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .recipe-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .recipe-description {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .view-more-button {
+            background-color: #007BFF;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .view-more-button:hover {
+            background-color: #0056b3;
+        }
+        
+
+
+
+/*nabbar*/
+
+
+
+/* Style the navigation bar */
+.navbar {
+  width: 20%;
+  background-color: #555;
+  overflow: auto;
+  justify-items: center;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: #000;
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: #04AA6D;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+/*nabbar stops here*/
+
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="navbar">
+        <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="#"><i class="fa fa-fw fa-search"></i> Contact</a>
+        <a href="#"><i class="fa fa-fw fa-envelope"></i> View Recipe</a>
+        
+      </div>
+
+
+    <div class="List">
+    <div class="recipe-card">
+        <img class="recipe-image" src="sapageti.jpg" alt="Recipe Image">
+        <h2 class="recipe-title">Spaghetti Carbonara</h2>
+        <p class="recipe-description">A classic Italian pasta dish featuring spaghetti coated in a creamy, cheesy sauce made with eggs, Pecorino Romano cheese, and pancetta or guanciale, topped with a dash of black pepper.</p>
+        <button class="view-more-button">View More</button>
+    </div>
+
+    <div class="recipe-card">
+        <img class="recipe-image" src="chicken.jpg" alt="Recipe Image">
+        <h2 class="recipe-title">Chicken Alfredo</h2>
+        <p class="recipe-description">An indulgent Italian-American pasta dish featuring fettuccine noodles served with tender chicken strips and a rich, creamy Alfredo sauce made from heavy cream and Parmesan cheese.</p>
+        <button class="view-more-button">View More</button>
+    </div>
+
+    <div class="recipe-card">
+        <img class="recipe-image" src="csalad.jpg" alt="Recipe Image">
+        <h2 class="recipe-title">Caprese Salad</h2>
+        <p class="recipe-description"> A refreshing and elegant Italian salad showcasing the vibrant flavors of ripe tomatoes, creamy mozzarella cheese, and fresh basil leaves, drizzled with extra-virgin olive oil and optionally balsamic glaze, seasoned with salt and pepper.</p>
+        <button class="view-more-button">View More</button>
+    </div>
+
+    <div class="recipe-card">
+        <img class="recipe-image" src="chicken.jpg" alt="Recipe Image">
+        <h2 class="recipe-title">Chicken Alfredo</h2>
+        <p class="recipe-description">An indulgent Italian-American pasta dish featuring fettuccine noodles served with tender chicken strips and a rich, creamy Alfredo sauce made from heavy cream and Parmesan cheese.</p>
+        <button class="view-more-button">View More</button>
+    </div>
+    </div>
+    
+
+    <!-- Add more recipe cards as needed -->
+
+</body>
+</html>

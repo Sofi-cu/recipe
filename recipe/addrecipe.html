@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add/Edit Recipe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 95%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Add/Edit Recipe</h2>
+        <form id="recipeForm">
+            <div class="form-group">
+                <label for="title">Recipe Title:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="ingredients">Ingredients </label>
+                <input type="text" id="ingredients" name="ingredients" required>
+            </div>
+            <div class="form-group">
+                <label for="steps">Preparation Steps:</label>
+                <textarea id="steps" name="steps" rows="6" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="imageURL">Image URL:</label>
+                <input type="text" id="imageURL" name="imageURL" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('recipeForm');
+        form.addRecipe('submit', function (event) {
+            event.preventDefault();
+
+            // Validate image URL format (simple check for http/https)
+            const imageURL = document.getElementById('imageURL').value;
+            if (!/^https?:\/\//i.test(imageURL)) {
+                alert('Please enter a valid image URL (starting with http:// or https://).');
+                return;
+            }
+
+            // Process the form data here (e.g., save to a database or display it)
+            console.log('Recipe Title:', form.title.value);
+            console.log('Ingredients:', form.ingredients.value);
+            console.log('Preparation Steps:', form.steps.value);
+            console.log('Image URL:', form.imageURL.value);
+
+            // Clear the form
+            form.reset();
+        });
+    </script>
+</body>
+</html>
